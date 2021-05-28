@@ -1,0 +1,195 @@
+<template>
+  <div class="trainers">
+    <h1 class="title text_red text-center">Тренерский состав</h1>
+    <p class="text-center trainers__text">
+      Наши тренера – профессионалы и увлеченные педагоги, которые воодушевляют,
+      вдохновляют, обучают и наставляют.
+    </p>
+    <div class="swiper__wrapper">
+      <swiper ref="swiper" class="swiper" :options="swiperOptions">
+        <swiper-slide
+          class="trainers__container"
+          v-for="slide in slides"
+          :key="slide.id"
+        >
+          <div>
+            <img
+              class="image-max-size trainers__image"
+              :src="require(`../assets/images/${slide.img}`)"
+            />
+            <p class="text-center title_small">{{ slide.name }}</p>
+          </div>
+          <div class="trainers__description">
+            <p class="title_small">Достижения:</p>
+            <ul>
+              <li v-for="trainer in slide.trainers" :key="trainer.id">
+                {{ trainer }}
+              </li>
+            </ul>
+          </div>
+        </swiper-slide>
+        <img
+          class="image-max-size trainers__bg-image"
+          src="../assets/images/Workspace.png"
+        />
+      </swiper>
+      <div class="swiper-arrow left" @click="prev()"></div>
+      <div class="swiper-arrow right" @click="next()"></div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      slides: [
+        {
+          name: "Адина Магавина",
+          img: "Trainer1.jpg",
+          trainers: [
+            "Международная Евразийская олимпиада серебро 2012",
+            "Республиканская Олимпиада золото 2012, бронза 2011",
+            "Полуфиналист чемпионата мира по программированию ACM ICPC",
+            "Google I/O, Mountain View, California, USA",
+            "Google Conference Grant, Craft Conference, Budapest, Hungary",
+          ],
+        },
+        {
+          name: "Хлыновский Кирилл",
+          img: "Trainer2.jpg",
+          trainers: [
+            "Международная Евразийская Олимпиада бронза 2016",
+            "Финалист чемпионата мира по программированию ICPC 2019-2020",
+          ],
+        },
+        {
+          name: "Лариса Пак",
+          img: "Trainer3.jpg",
+          trainers: [
+            "Преподавательский стаж - 27 лет",
+            "Ученики являются призерами городских и областных этапов олимпиад и конкурсов проектов по информатике",
+            "Методист материала по логике",
+          ],
+        },
+        {
+          name: "Рузана Айшуакова",
+          img: "Trainer4.jpg",
+          trainers: [
+            "Призер III Международной научно-технической конференции студентов, магистрантов и молодых ученых",
+            "Реализовала алгоритм постановки медицинского диагноза на основе биохимического анализа крови",
+            "Реализация различных клиент-серверных веб и мобильных приложений",
+          ],
+        },
+      ],
+      swiperOptions: {
+        prevButton: ".swiper-button-prev",
+        nextButton: ".swiper-button-next",
+        loop: true,
+        effect: "fade",
+        speed: 800,
+        fadeEffect: { crossFade: true },
+      },
+    };
+  },
+  methods: {
+    prev() {
+      this.$refs.swiper.$swiper.slidePrev();
+    },
+    next() {
+      this.$refs.swiper.$swiper.slideNext();
+    },
+  },
+};
+</script>
+
+<style scoped>
+.trainers {
+  margin-top: 120px;
+}
+.trainers__text {
+  margin: 20px 100px;
+}
+.trainers__container {
+  position: relative;
+  border: 2px solid rgba(102, 102, 102, 0.7);
+  border-radius: 10px;
+  padding: 45px;
+  display: flex;
+  align-items: center;
+}
+.trainers__image {
+  width: 250px;
+  margin-bottom: 10px;
+  border-radius: 30px;
+}
+.trainers__description {
+  margin-left: 60px;
+}
+ul {
+  padding: 15px;
+  list-style-type: disc;
+}
+.trainers__bg-image {
+  width: 30%;
+  border-radius: 10px;
+  z-index: -1;
+  position: absolute;
+  left: 70%;
+  top: 0;
+  opacity: 0.3;
+}
+.swiper__wrapper {
+  position: relative;
+}
+.swiper-arrow {
+  border: solid rgba(0, 0, 0, 0.7);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 12px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+}
+.right {
+  transform: translateY(-50%) rotate(-45deg);
+  right: -50px;
+}
+.left {
+  transform: translateY(-50%) rotate(135deg);
+  left: -50px;
+}
+@media (max-width: 1023px) {
+  .trainers {
+    margin-top: 60px;
+  }
+  .trainers__text {
+    margin: 15px 50px;
+    font-size: 14px;
+  }
+  .trainers__container {
+    font-size: 14px;
+    padding: 24px;
+  }
+  .trainers__image {
+    width: 200px;
+    margin-bottom: 5px;
+  }
+  .title_small {
+    font-size: 14px;
+  }
+  ul > li {
+    margin: 2px 0;
+  }
+  .swiper-arrow {
+    padding: 10px;
+    border-width: 0 2px 2px 0;
+  }
+  .right {
+    right: -25px;
+  }
+  .left {
+    left: -25px;
+  }
+}
+</style>
