@@ -192,4 +192,29 @@ ul {
     left: -25px;
   }
 }
+@media (max-width: 541px) {
+  .trainers__container {
+    flex-direction: column;
+  }
+  .trainers__description {
+    margin: 15px 0 0;
+  }
+  .trainers__bg-image {
+    display: none;
+  }
+}
+@media (max-width: 426px) {
+  .trainers__text {
+    font-size: 11px;
+  }
+  .trainers__image {
+    width: 150px;
+  }
+  ul > li {
+    font-size: 11px;
+  }
+  .title_small {
+    font-size: 11px;
+  }
+}
 </style>

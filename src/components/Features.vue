@@ -81,14 +81,19 @@ export default {
     font-size: 14px;
   }
 }
-@media (max-width: 426px) {
-  .features {
-    margin-bottom: 40px;
-  }
+@media (max-width: 651px) {
   .features__container {
     flex-direction: column;
     justify-content: none;
     align-items: center;
+  }
+  .features__info {
+    width: 80%;
+  }
+}
+@media (max-width: 426px) {
+  .features {
+    margin-bottom: 40px;
   }
   .features__info {
     width: 100%;

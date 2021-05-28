@@ -76,4 +76,71 @@ export default {};
   bottom: 0;
   left: 70%;
 }
+@media (max-width: 1023px) {
+  .dates {
+    margin: 60px 10px 0;
+  }
+  .dates__container {
+    margin-top: 25px;
+    border: 2px solid rgba(102, 102, 102, 0.7);
+    border-radius: 10px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+  }
+  .dates__block {
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    padding: 15px;
+  }
+  .dates__button {
+    margin-top: 8px;
+    font-size: 14px;
+    width: 120px;
+    height: 35px;
+  }
+  p {
+    font-size: 14px;
+  }
+  .dates__description {
+    margin: 0 25px 0 30px;
+  }
+}
+@media (max-width: 601px) {
+  .dates__image {
+    display: none;
+  }
+}
+@media (max-width: 486px) {
+  .dates__container {
+    flex-direction: column;
+  }
+  .dates__description {
+    margin: 25px 0 0;
+  }
+}
+@media (max-width: 426px) {
+  .dates__container {
+    padding: 15px;
+  }
+  .dates__block {
+    width: 120px;
+    height: 120px;
+    border-radius: 18px;
+    padding: 10px;
+  }
+  p {
+    font-size: 11px;
+  }
+  .dates__description {
+    margin-top: 15px;
+  }
+  .dates__button {
+    margin-top: 8px;
+    font-size: 11px;
+    width: 100px;
+    height: 30px;
+  }
+}
 </style>

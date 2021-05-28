@@ -56,12 +56,6 @@ export default {};
   .join__image {
     margin: -20px 0;
   }
-  .join__button {
-    font-size: 14px;
-    width: 50%;
-    height: 48px;
-    max-width: 250px;
-  }
 }
 @media (max-width: 426px) {
   .join__title {
@@ -70,11 +64,6 @@ export default {};
   }
   .join__description {
     font-size: 11px;
-  }
-}
-@media (max-width: 321px) {
-  .join__button {
-    font-size: 10px;
   }
 }
 </style>

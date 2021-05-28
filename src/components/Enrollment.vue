@@ -61,4 +61,47 @@ export default {
   background: #bdf8f3;
   transition: 0.4s;
 }
+@media (max-width: 1023px) {
+  .enrollment {
+    margin: 60px 10px 0;
+  }
+  .enrollment__container {
+    margin: 0 50px;
+  }
+  .enrollment__title {
+    margin-bottom: 15px;
+  }
+  .enrollment__block {
+    margin: 0 20px 5px;
+  }
+  p {
+    font-size: 14px;
+  }
+  .enrollment__image {
+    margin-top: 25px;
+  }
+  .enrollment__button {
+    margin-top: 25px;
+  }
+}
+@media (max-width: 426px) {
+  .enrollment {
+    margin: 50px 0 0;
+  }
+  .enrollment__title {
+    margin-bottom: 15px;
+  }
+  .enrollment__block {
+    margin: 0 0 3px;
+  }
+  p {
+    font-size: 11px;
+  }
+  .enrollment__image {
+    margin-top: 15px;
+  }
+  .enrollment__button {
+    margin-top: 15px;
+  }
+}
 </style>

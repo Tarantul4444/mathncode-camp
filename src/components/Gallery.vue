@@ -7,6 +7,7 @@
         class="swiper gallery-top"
         :options="swiperOptionTop"
         ref="swiperTop"
+        @slideChange="onSlideChange"
       >
         <swiper-slide class="slide-1"></swiper-slide>
         <swiper-slide class="slide-2"></swiper-slide>
@@ -20,6 +21,7 @@
         @swiper="setThumbSwiper"
         :options="swiperOptionThumbs"
         ref="swiperThumbs"
+        @slideChange="onThumbnailChange"
       >
         <swiper-slide class="slide-1"></swiper-slide>
         <swiper-slide class="slide-2"></swiper-slide>
@@ -60,6 +62,12 @@ export default {
   methods: {
     setThumbSwiper(swiper) {
       this.thumbSwiper = swiper;
+    },
+    onThumbnailChange(val) {
+      this.$refs.swiperTop.$swiper.slideTo(val.activeIndex);
+    },
+    onSlideChange(val) {
+      this.$refs.swiperThumbs.$swiper.slideTo(val.activeIndex);
     },
   },
 };
@@ -109,5 +117,30 @@ export default {
 }
 .gallery-thumbs .swiper-slide-active {
   opacity: 1;
+}
+@media (max-width: 1023px) {
+  .gallery {
+    margin-top: 65px;
+  }
+  .thumb-example {
+    height: 350px;
+    margin-top: 25px;
+  }
+  .gallery-thumbs {
+    padding: 20px 0 5px;
+  }
+}
+@media (max-width: 426px) {
+  .gallery {
+    margin-top: 50px;
+  }
+  .thumb-example {
+    height: 250px;
+    margin-top: 20px;
+  }
+  .gallery-thumbs {
+    height: 30%;
+    padding: 10px 0 5px;
+  }
 }
 </style>

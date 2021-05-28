@@ -30,4 +30,22 @@
 .footer__images > img:first-child {
   margin-left: 0;
 }
+@media (max-width: 1023px) {
+  .footer {
+    padding: 15px 10px;
+  }
+  p {
+    font-size: 12px;
+  }
+  .footer__images > img {
+    margin-left: 4px;
+    width: 30px;
+  }
+}
+@media (max-width: 426px) {
+  .footer__images > img {
+    margin-left: 3px;
+    width: 30px;
+  }
+}
 </style>

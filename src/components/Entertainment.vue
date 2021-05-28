@@ -61,4 +61,40 @@ export default {
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 1023px) {
+  .entertainment {
+    margin-top: 80px;
+  }
+  .entertainment__block {
+    width: 150px;
+    height: 150px;
+    margin: 40px 20px 0;
+  }
+  p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1023px) and (min-width: 840px) {
+  .entertainment__container {
+    justify-content: space-evenly;
+  }
+}
+@media (max-width: 461px) {
+  .entertainment__container {
+    justify-content: space-around;
+  }
+}
+@media (max-width: 426px) {
+  .entertainment {
+    margin-top: 60px;
+  }
+  .entertainment__block {
+    width: 120px;
+    height: 120px;
+    margin: 30px 20px 0;
+  }
+  p {
+    font-size: 11px;
+  }
+}
 </style>

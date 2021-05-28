@@ -7,12 +7,12 @@
       <Aims />
       <Program />
       <Trainers />
-      <!-- <Entertainment />
+      <Entertainment />
       <Dates />
       <Enrollment />
-      <Gallery /> -->
+      <Gallery />
     </div>
-    <!-- <Footer /> -->
+    <Footer />
   </div>
 </template>
 
@@ -23,11 +23,11 @@ import Features from "./components/Features.vue";
 import Aims from "./components/Aims.vue";
 import Program from "./components/Program.vue";
 import Trainers from "./components/Trainers.vue";
-// import Entertainment from "./components/Entertainment.vue";
-// import Dates from "./components/Dates.vue";
-// import Enrollment from "./components/Enrollment.vue";
-// import Gallery from "./components/Gallery.vue";
-// import Footer from "./components/Footer.vue";
+import Entertainment from "./components/Entertainment.vue";
+import Dates from "./components/Dates.vue";
+import Enrollment from "./components/Enrollment.vue";
+import Gallery from "./components/Gallery.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
   name: "App",
@@ -38,11 +38,11 @@ export default {
     Aims,
     Program,
     Trainers,
-    // Entertainment,
-    // Dates,
-    // Enrollment,
-    // Gallery,
-    // Footer,
+    Entertainment,
+    Dates,
+    Enrollment,
+    Gallery,
+    Footer,
   },
 };
 </script>
