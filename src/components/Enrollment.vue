@@ -12,7 +12,7 @@
     </div>
     <img
       src="../assets/images/Team.png"
-      class="image-max-size enrollment__image"
+      class="enrollment__image"
     />
     <button class="button enrollment__button">Присоединяйтесь</button>
   </div>
@@ -61,6 +61,40 @@ export default {
   background: #bdf8f3;
   transition: 0.4s;
 }
+@media (max-width: 2561px) and (min-width: 2151px) {
+  .enrollment {
+    margin: 300px 40px 0;
+  }
+  .enrollment__title {
+    margin-bottom: 80px;
+  }
+  .enrollment__block {
+    margin: 0 30px 16px;
+  }
+  .enrollment__image {
+    margin-top: 90px;
+  }
+  .enrollment__button {
+    margin-top: 90px;
+  }
+}
+@media (max-width: 2151px) and (min-width: 1751px) {
+  .enrollment {
+    margin: 200px 40px 0;
+  }
+  .enrollment__title {
+    margin-bottom: 45px;
+  }
+  .enrollment__block {
+    margin: 0 30px 8px;
+  }
+  .enrollment__image {
+    margin-top: 60px;
+  }
+  .enrollment__button {
+    margin-top: 60px;
+  }
+}
 @media (max-width: 1023px) {
   .enrollment {
     margin: 60px 10px 0;
@@ -72,16 +106,18 @@ export default {
     margin-bottom: 15px;
   }
   .enrollment__block {
-    margin: 0 20px 5px;
-  }
-  p {
-    font-size: 14px;
+    margin: 0 0 10px;
   }
   .enrollment__image {
     margin-top: 25px;
   }
   .enrollment__button {
     margin-top: 25px;
+  }
+}
+@media (max-width: 601px) {
+  .enrollment__container {
+    margin: 0;
   }
 }
 @media (max-width: 426px) {
@@ -94,14 +130,21 @@ export default {
   .enrollment__block {
     margin: 0 0 3px;
   }
-  p {
-    font-size: 11px;
-  }
   .enrollment__image {
     margin-top: 15px;
   }
   .enrollment__button {
     margin-top: 15px;
+  }
+}
+@media (max-width: 395px) {
+  .enrollment__button {
+    font-size: 12px;
+  }
+}
+@media (max-width: 360px) {
+  .enrollment__button {
+    width: 150px;
   }
 }
 </style>

@@ -12,7 +12,7 @@
       </div>
     </div>
     <img
-      class="image-max-size aims__image"
+      class="aims__image"
       src="../assets/images/Computer.png"
     />
   </div>
@@ -79,6 +79,40 @@ export default {
 ul {
   list-style-type: none;
 }
+@media (max-width: 2561px) and (min-width: 2151px) {
+  .aims {
+    margin-bottom: 300px;
+  }
+  .aims__container {
+    margin-top: 120px;
+  }
+  .aims__container__block {
+    margin: 0 50px;
+  }
+  .aims__title {
+    margin: 20px 0;
+  }
+  .aims__image {
+    margin-top: 50px;
+  }
+}
+@media (max-width: 2151px) and (min-width: 1751px) {
+  .aims {
+    margin-bottom: 200px;
+  }
+  .aims__container {
+    margin-top: 90px;
+  }
+  .aims__container__block {
+    margin: 0 30px;
+  }
+  .aims__title {
+    margin: 12px 0;
+  }
+  .aims__image {
+    margin-top: 30px;
+  }
+}
 @media (max-width: 1023px) {
   .aims {
     margin-bottom: 60px;
@@ -87,20 +121,41 @@ ul {
     margin-top: 30px;
   }
   .aims__container__block {
-    font-size: 14px;
     margin: 0 9px;
   }
   .aims__image {
     margin-top: 10px;
   }
 }
-@media (max-width: 426px) {
+@media (max-width: 731px) {
   .aims__container {
     flex-direction: column;
     margin: 0;
   }
   p {
-    font-size: 11px;
+    text-align: center;
+  }
+  .aims__container__block {
+    margin: 0;
+  }
+  .text-center {
+    font-family: Montserrat-Bold;
+    margin-top: 30px;
+  }
+  .aims__title {
+    margin: 0 0 12px;
+  }
+  ul > li {
+    text-align: center;
+  }
+  .aims__image {
+    width: 250px;
+  }
+}
+@media (max-width: 426px) {
+  .aims__container {
+    flex-direction: column;
+    margin: 0;
   }
   .aims__container__block {
     margin: 0;
@@ -111,10 +166,6 @@ ul {
   }
   .aims__title {
     margin: 0 0 5px;
-  }
-  ul > li {
-    text-align: center;
-    font-size: 11px;
   }
   .aims__image {
     width: 200px;

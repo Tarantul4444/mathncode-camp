@@ -8,6 +8,29 @@
     font-size: 16px;
     border: none;
 }
+@media (max-width: 2561px) and (min-width: 2151px) { 
+  .button {
+    font-size: 50px;
+    width: 40%;
+    height: 140px;
+    border-radius: 70px;
+  }
+}
+@media (max-width: 2151px) and (min-width: 1751px) { 
+  .button {
+    font-size: 35px;
+    width: 40%;
+    height: 105px;
+    border-radius: 50px;
+  }
+}
+@media (max-width: 1751px) and (min-width: 1451px) { 
+  .button {
+    font-size: 24px;
+    width: 40%;
+    height: 80px;
+  }
+}
 @media (max-width: 1023px) {
     .button {
       font-size: 14px;

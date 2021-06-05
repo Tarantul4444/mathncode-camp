@@ -30,6 +30,32 @@
 .footer__images > img:first-child {
   margin-left: 0;
 }
+@media (max-width: 2561px) and (min-width: 2151px) {
+  .footer {
+    padding: 50px 40px;
+  }
+  .footer__images > img {
+    margin-left: 15px;
+    width: 120px;
+  }
+}
+@media (max-width: 2151px) and (min-width: 1751px) {
+  .footer {
+    padding: 35px 25px;
+  }
+  .footer__images > img {
+    margin-left: 8px;
+    width: 80px;
+  }
+}
+@media (max-width: 1751px) and (min-width: 1451px) {
+  .footer {
+    padding: 30px 20px;
+  }
+  .footer__images > img {
+    width: 60px;
+  }
+}
 @media (max-width: 1023px) {
   .footer {
     padding: 15px 10px;

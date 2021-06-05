@@ -67,31 +67,52 @@ export default {
 .program__description {
   margin: 28px 150px 0;
 }
+@media (max-width: 2561px) and (min-width: 2151px) {
+  .program__container {
+    margin-top: 120px;
+  }
+  .program__info {
+    margin-top: 70px;
+  }
+  .program__image {
+    width: 1000px;
+  }
+  .program__description {
+    margin: 70px 200px 0;
+  }
+}
+@media (max-width: 2151px) and (min-width: 1751px) {
+  .program__container {
+    margin-top: 80px;
+  }
+  .program__info {
+    margin-top: 40px;
+  }
+  .program__image {
+    width: 700px;
+  }
+  .program__description {
+    margin: 40px 150px 0;
+  }
+}
 @media (max-width: 1023px) {
   .program__container {
     margin-top: 25px;
   }
-  .title_small {
-    font-size: 14px;
-  }
   .program__info {
     margin-top: 14px;
-    font-size: 14px;
   }
   .program__description {
     margin: 14px 75px 0;
-    font-size: 14px;
+  }
+}
+@media (max-width: 631px) {
+  .program__image {
+    display: none;
   }
 }
 @media (max-width: 426px) {
-  .program__info {
-    font-size: 11px;
-  }
-  .title_small {
-    font-size: 11px;
-  }
   .program__description {
-    font-size: 11px;
     width: 100%;
     margin: 15px 0 0;
   }

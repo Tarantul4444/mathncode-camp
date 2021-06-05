@@ -32,6 +32,7 @@
           class="image-max-size trainers__bg-image"
           src="../assets/images/Workspace.png"
         />
+        <div class="swiper-pagination" slot="pagination"></div>
       </swiper>
       <div class="swiper-arrow left" @click="prev()"></div>
       <div class="swiper-arrow right" @click="next()"></div>
@@ -86,6 +87,10 @@ export default {
         prevButton: ".swiper-button-prev",
         nextButton: ".swiper-button-next",
         loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
         effect: "fade",
         speed: 800,
         fadeEffect: { crossFade: true },
@@ -159,13 +164,88 @@ ul {
   transform: translateY(-50%) rotate(135deg);
   left: -50px;
 }
+@media (max-width: 2561px) and (min-width: 2151px) {
+  .trainers {
+    margin-top: 300px;
+  }
+  .trainers__text {
+    margin: 60px 200px;
+  }
+  .trainers__container {
+    border-width: 4px;
+    border-radius: 40px;
+    padding: 90px;
+  }
+  .trainers__image {
+    width: 450px;
+    margin-bottom: 30px;
+  }
+  .trainers__bg-image  {
+    border-radius: 40px;
+  }
+  .trainers__description {
+    margin-left: 130px;
+  }
+  .swiper-arrow {
+    border-width: 0 7px 7px 0;
+    padding: 30px;
+  }
+  .right {
+    right: -80px;
+  }
+  .left {
+    left: -80px;
+  }
+}
+@media (max-width: 2151px) and (min-width: 1751px) {
+  .trainers {
+    margin-top: 200px;
+  }
+  .trainers__text {
+    margin: 30px 100px;
+  }
+  .trainers__container {
+    border-width: 4px;
+    border-radius: 20px;
+    padding: 60px;
+  }
+  .trainers__image {
+    width: 350px;
+    margin-bottom: 20px;
+  }
+  .trainers__bg-image  {
+    border-radius: 20px;
+  }
+  .trainers__description {
+    margin-left: 90px;
+  }
+  .swiper-arrow {
+    border-width: 0 5px 5px 0;
+    padding: 20px;
+  }
+  .right {
+    right: -80px;
+  }
+  .left {
+    left: -80px;
+  }
+}
+@media (max-width: 1751px) and (min-width: 1451px) {
+  .trainers__image {
+    width: 300px;
+    height: 300px;
+  }
+  .swiper-arrow {
+    border-width: 0 4px 4px 0;
+    padding: 15px;
+  }
+}
 @media (max-width: 1023px) {
   .trainers {
     margin-top: 60px;
   }
   .trainers__text {
     margin: 15px 50px;
-    font-size: 14px;
   }
   .trainers__container {
     font-size: 14px;
@@ -174,9 +254,6 @@ ul {
   .trainers__image {
     width: 200px;
     margin-bottom: 5px;
-  }
-  .title_small {
-    font-size: 14px;
   }
   ul > li {
     margin: 2px 0;
@@ -192,7 +269,7 @@ ul {
     left: -25px;
   }
 }
-@media (max-width: 541px) {
+@media (max-width: 575px) {
   .trainers__container {
     flex-direction: column;
   }
@@ -202,19 +279,21 @@ ul {
   .trainers__bg-image {
     display: none;
   }
+  .left {
+    display: none;
+  }
+  .right {
+    display: none;
+  }
+}
+@media (max-width: 436px) {
+  .trainers__text {
+    margin: 8px 20px;
+  }
 }
 @media (max-width: 426px) {
-  .trainers__text {
-    font-size: 11px;
-  }
   .trainers__image {
     width: 150px;
-  }
-  ul > li {
-    font-size: 11px;
-  }
-  .title_small {
-    font-size: 11px;
   }
 }
 </style>

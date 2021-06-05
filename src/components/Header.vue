@@ -22,6 +22,7 @@
       </ul>
       <button class="button header__button">Присоединяйтесь</button>
     </div>
+    <div v-show="isOpen" class="blackout"></div>
     <img class="header__image" src="../assets/images/MnC_logo.svg" />
     <ul class="header__list">
       <li>О нас</li>
@@ -54,7 +55,7 @@ export default {
   align-items: center;
   justify-content: space-between;
   position: fixed;
-  z-index: 10;
+  z-index: 100;
   width: 100%;
   left: 0;
   top: 0;
@@ -68,7 +69,7 @@ export default {
 }
 .header__image {
   width: 140px;
-  height: 60px;
+  height: auto;
 }
 .header__list {
   display: flex;
@@ -77,6 +78,37 @@ export default {
 }
 .header__list > li {
   margin: 0 32px;
+}
+@media (max-width: 2561px) and (min-width: 2151px) {
+  .header {
+    padding: 40px 28px;
+  }
+  .header__image {
+    width: 300px;
+  }
+  .header__list > li {
+    margin: 0 40px;
+  }
+}
+@media (max-width: 2151px) and (min-width: 1751px) {
+  .header {
+    padding: 30px 22px;
+  }
+  .header__image {
+    width: 200px;
+  }
+  .header__list > li {
+    margin: 0 40px;
+  }
+}
+@media (max-width: 1751px) and (min-width: 1451px) {
+  .header {
+    padding: 24px 18px;
+  }
+  .header__image {
+    width: 160px;
+    height: auto;
+  }
 }
 @media (max-width: 1023px) {
   .header {
@@ -93,12 +125,14 @@ export default {
   .header__menu {
     left: 0;
     top: 60px;
-    display: block;
+    display: flex;
+    flex-direction: column;
     background: #fff8f4;
     position: absolute;
     width: 60%;
     height: calc(100vh - 60px);
     padding: 30px;
+    z-index: 1000;
   }
   .header__menu-list {
     display: flex;
@@ -109,11 +143,11 @@ export default {
     padding: 10px 0;
   }
   .header__button {
-    margin-top: 10px;
-    height: 56px;
+    padding: 12px 16px;
     font-size: 14px;
     width: 100%;
     max-width: 230px;
+    margin-top: auto;
   }
   .header__image {
     position: absolute;
@@ -124,10 +158,24 @@ export default {
   .header__telephone {
     font-size: 12px;
   }
+  .blackout {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 100;
+    background: rgba(0,0,0,0.7);
+  }
 }
-@media (max-width: 424px) {
+@media (max-width: 395px) {
   .header__button {
     font-size: 12px;
+  }
+}
+@media (max-width: 360px) {
+  .header__button {
+    padding: 0;
   }
 }
 </style>

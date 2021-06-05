@@ -11,7 +11,7 @@
         <p class="features__text">{{ feature.text }}</p>
       </div>
       <img
-        class="image-max-size features__image"
+        class="features__image"
         :src="require(`../assets/images/${feature.img}`)"
       />
     </div>
@@ -54,7 +54,7 @@ export default {
 .features__container {
   margin-top: 80px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
 }
 .features__info {
@@ -67,6 +67,35 @@ export default {
 .features__text {
   margin-top: 10px;
 }
+@media (max-width: 2561px) and (min-width: 2151px) {
+  .features {
+    margin-bottom: 300px;
+  }
+  .features__container {
+    margin-top: 150px;
+  }
+  .features__image {
+    width: 50%;
+    margin-left: 90px;
+  }
+  .features__text {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 2151px) and (min-width: 1751px) {
+  .features {
+    margin-bottom: 200px;
+  }
+  .features__container {
+    margin-top: 120px;
+  }
+  .features__image {
+    margin-left: 60px;
+  }
+  .features__text {
+    margin-top: 20px;
+  }
+}
 @media (max-width: 1023px) {
   .features {
     margin-bottom: 60px;
@@ -74,11 +103,9 @@ export default {
   .features__container {
     margin-top: 30px;
   }
-  .features__info {
-    font-size: 10px;
-  }
-  .features__text {
-    font-size: 14px;
+  .features__image {
+    width: 40%;
+    margin: 15px 0 0;
   }
 }
 @media (max-width: 651px) {
@@ -97,13 +124,9 @@ export default {
   }
   .features__info {
     width: 100%;
-    font-size: 8px;
-  }
-  .features__text {
-    font-size: 11px;
   }
   .features__image {
-    margin: 0;
+    margin: 15px 0 0;
     width: 60%;
   }
 }

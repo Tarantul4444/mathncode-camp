@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Header />
+    <!-- <Modal /> -->
     <div class="container">
       <Join />
       <Features />
@@ -29,6 +30,8 @@ import Enrollment from "./components/Enrollment.vue";
 import Gallery from "./components/Gallery.vue";
 import Footer from "./components/Footer.vue";
 
+// import Modal from "./components/Modal.vue";
+
 export default {
   name: "App",
   components: {
@@ -43,6 +46,8 @@ export default {
     Enrollment,
     Gallery,
     Footer,
+    // ----------
+    // Modal,
   },
 };
 </script>
@@ -72,9 +77,34 @@ ul {
 .container {
   padding: 200px 140px;
 }
+@media (max-width: 2561px) and (min-width: 2151px) {
+  .container {
+    padding: 400px 300px 450px;
+  }
+}
+@media (max-width: 2151px) and (min-width: 1751px) {
+  .container {
+    padding: 250px 220px 300px;
+  }
+}
+@media (max-width: 1751px) and (min-width: 1451px) {
+  .container {
+    padding: 250px 180px;
+  }
+}
 @media (max-width: 1023px) {
   .container {
     padding: 100px 40px;
+  }
+}
+@media (max-width: 641px) {
+  .container {
+    padding: 100px 30px;
+  }
+}
+@media (max-width: 426px) {
+  .container {
+    padding: 100px 20px;
   }
 }
 </style>
