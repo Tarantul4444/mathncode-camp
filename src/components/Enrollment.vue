@@ -10,18 +10,18 @@
         {{ enroll }}
       </p>
     </div>
-    <img
-      src="../assets/images/Team.png"
-      class="enrollment__image"
-    />
-    <button class="button enrollment__button">Присоединяйтесь</button>
+    <img src="../assets/images/Team.png" class="enrollment__image" />
+    <button class="button enrollment__button" @click="openModal">Присоединяйтесь</button>
   </div>
 </template>
 
 <script>
+import { EventBus } from "../main.js";
+
 export default {
   data() {
     return {
+      showModal: false,
       enrollment: [
         "Для поступления в M&C Camp необходимо пройти вступительную работу. Это контест, в котором около 20 задач разного уровня. По результатам контеста проходит зачисление в уровни.",
         "В первый день лагеря планируется перепроверка уровня участников и распределение по группам.",
@@ -29,6 +29,12 @@ export default {
       ],
     };
   },
+  methods: {
+    openModal() {
+      this.showModal = true,
+      EventBus.$emit("boolean", this.showModal)
+    },
+  }
 };
 </script>
 

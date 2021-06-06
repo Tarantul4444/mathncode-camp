@@ -11,10 +11,7 @@
         <p v-else>{{ aim.text }}</p>
       </div>
     </div>
-    <img
-      class="aims__image"
-      src="../assets/images/Computer.png"
-    />
+    <img class="aims__image" src="../assets/images/Computer.png" />
   </div>
 </template>
 

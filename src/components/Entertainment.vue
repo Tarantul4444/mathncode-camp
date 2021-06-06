@@ -7,13 +7,19 @@
         v-for="(block, index) in blocks"
         :key="block.id"
       >
-        <div class="entertainment__flip-box-inner bg-red" :class="{ 'bg-gray': index % 2 === 1 }">
+        <div
+          class="entertainment__flip-box-inner bg-red"
+          :class="{ 'bg-gray': index % 2 === 1 }"
+        >
           <div class="entertainment__flip-box-front">
             <p class="text-center title_small text_white">{{ block.text }}</p>
           </div>
           <div class="entertainment__flip-box-back">
-            <img class="entertainment__flip-box-image" :src="require(`../assets/images/${block.img}`)" />
-          </div>       
+            <img
+              class="entertainment__flip-box-image"
+              :src="require(`../assets/images/${block.img}`)"
+            />
+          </div>
         </div>
       </div>
     </div>

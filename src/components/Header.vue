@@ -1,35 +1,43 @@
 <template>
   <div class="header">
+    <transition name="header__burger-fade">
     <img
       class="header__icon"
       v-show="!isOpen"
       @click="isOpen = true"
       src="../assets/icons/Menu.svg"
     />
+    </transition>
+    <transition name="header__cancel-fade">
     <img
       class="header__icon"
       v-show="isOpen"
       @click="isOpen = false"
       src="../assets/icons/Cancel.svg"
     />
-    <div class="header__menu" v-show="isOpen">
-      <ul class="header__menu-list">
-        <li>О нас</li>
-        <li>Обучение</li>
-        <li>Тренера</li>
-        <li>Даты</li>
-        <li>Галерея</li>
-      </ul>
-      <button class="button header__button">Присоединяйтесь</button>
-    </div>
-    <div v-show="isOpen" class="blackout"></div>
+    </transition>
+    <transition name="slide-fade">
+      <div class="header__menu" v-show="isOpen">
+        <ul class="header__menu-list">
+          <li><a href="#" v-scroll-to="'#about'">О нас</a></li>
+          <li><a href="#" v-scroll-to="'#education'">Обучение</a></li>
+          <li><a href="#" v-scroll-to="'#trainers'">Тренера</a></li>
+          <li><a href="#" v-scroll-to="'#dates'">Даты</a></li>
+          <li><a href="#" v-scroll-to="'#gallery'">Галерея</a></li>
+        </ul>
+        <button class="button header__button" @click="openModal">Присоединяйтесь</button>
+      </div>
+    </transition>
+    <transition name="blackout-fade">
+      <div v-show="isOpen" class="blackout"></div>
+    </transition>
     <img class="header__image" src="../assets/images/MnC_logo.svg" />
     <ul class="header__list">
-      <li>О нас</li>
-      <li>Обучение</li>
-      <li>Тренера</li>
-      <li>Даты</li>
-      <li>Галерея</li>
+      <li><a href="#" v-scroll-to="'#about'">О нас</a></li>
+      <li><a href="#" v-scroll-to="'#education'">Обучение</a></li>
+      <li><a href="#" v-scroll-to="'#trainers'">Тренера</a></li>
+      <li><a href="#" v-scroll-to="'#dates'">Даты</a></li>
+      <li><a href="#" v-scroll-to="'#gallery'">Галерея</a></li>
     </ul>
     <div class="header__telephone">
       <p>+7(727) 269-54-54</p>
@@ -39,12 +47,21 @@
 </template>
 
 <script>
+import { EventBus } from "../main.js";
+
 export default {
   data() {
     return {
       isOpen: false,
-    };
+      showModal: false,
+    }
   },
+  methods: {
+    openModal() {
+      this.showModal = true,
+      EventBus.$emit("boolean", this.showModal)
+    }
+  }
 };
 </script>
 
@@ -79,6 +96,38 @@ export default {
 .header__list > li {
   margin: 0 32px;
 }
+.header__button:hover {
+  color: #d90000;
+  background: #bdf8f3;
+  transition: 0.4s;
+}
+/* Animations */
+.slide-fade-enter-active, .blackout-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active, .blackout-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to,
+.blackout-fade-enter {
+  transform: translateX(-10px);
+  opacity: 0;
+}
+.blackout-fade-leave-to {
+  opacity: 0;
+}
+.header__burger-fade-enter-active, .header__cancel-fade-enter-active {
+  transition: all .4s ease;
+  transition-delay: 0.4s;
+}
+.header__burger-fade-leave-active, .header__cancel-fade-leave-active  {
+  transition: all .4s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.header__burger-fade-enter, .header__burger-fade-leave-to,
+.header__cancel-fade-enter, .header__cancel-fade-leave-to {
+  opacity: 0;
+}
+/* Medias */
 @media (max-width: 2561px) and (min-width: 2151px) {
   .header {
     padding: 40px 28px;
@@ -165,7 +214,7 @@ export default {
     top: 60px;
     left: 0;
     z-index: 100;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0, 0, 0, 0.7);
   }
 }
 @media (max-width: 395px) {

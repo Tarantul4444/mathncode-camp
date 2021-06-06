@@ -1,17 +1,17 @@
 <template>
   <div id="app">
     <Header />
-    <!-- <Modal /> -->
+    <Modal v-show="showModal" />
     <div class="container">
       <Join />
-      <Features />
+      <Features id="about" />
       <Aims />
-      <Program />
-      <Trainers />
+      <Program id="education" />
+      <Trainers id="trainers" />
       <Entertainment />
-      <Dates />
+      <Dates id="dates" />
       <Enrollment />
-      <Gallery />
+      <Gallery id="gallery" />
     </div>
     <Footer />
   </div>
@@ -30,7 +30,8 @@ import Enrollment from "./components/Enrollment.vue";
 import Gallery from "./components/Gallery.vue";
 import Footer from "./components/Footer.vue";
 
-// import Modal from "./components/Modal.vue";
+import Modal from "./components/Modal.vue";
+import { EventBus } from "./main.js";
 
 export default {
   name: "App",
@@ -47,8 +48,18 @@ export default {
     Gallery,
     Footer,
     // ----------
-    // Modal,
+    Modal,
   },
+  data() {
+    return {
+      showModal: false,
+    }
+  },
+  created() {
+    EventBus.$on("boolean", (showModal) => {
+      this.showModal = showModal
+    })
+  }
 };
 </script>
 

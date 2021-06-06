@@ -6,9 +6,15 @@
     </div>
     <p>© M&C 2021</p>
     <div class="footer__images">
-      <img src="../assets/images/Instagram.svg" />
-      <img src="../assets/images/Telegram.svg" />
-      <img src="../assets/images/VK.svg" />
+      <a href="https://instagram.com/mathncode?utm_medium=copy_link"
+        ><img src="../assets/images/Instagram.svg"
+      /></a>
+      <a href="https://t.me/mathncode"
+        ><img src="../assets/images/Telegram.svg"
+      /></a>
+      <a href="https://vk.com/mathncode"
+        ><img src="../assets/images/VK.svg"
+      /></a>
     </div>
   </div>
 </template>
@@ -23,7 +29,7 @@
   left: 0;
   background: #fff8f4;
 }
-.footer__images > img {
+img {
   margin-left: 5px;
   width: 40px;
 }
@@ -34,7 +40,7 @@
   .footer {
     padding: 50px 40px;
   }
-  .footer__images > img {
+  img {
     margin-left: 15px;
     width: 120px;
   }
@@ -43,7 +49,7 @@
   .footer {
     padding: 35px 25px;
   }
-  .footer__images > img {
+  img {
     margin-left: 8px;
     width: 80px;
   }
@@ -52,7 +58,7 @@
   .footer {
     padding: 30px 20px;
   }
-  .footer__images > img {
+  img {
     width: 60px;
   }
 }
@@ -63,15 +69,14 @@
   p {
     font-size: 12px;
   }
-  .footer__images > img {
+  img {
     margin-left: 4px;
     width: 30px;
   }
 }
 @media (max-width: 426px) {
-  .footer__images > img {
+  img {
     margin-left: 3px;
-    width: 30px;
   }
 }
 </style>

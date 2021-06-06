@@ -26,6 +26,14 @@
 h1 {
     font-size: 28px;
 }
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+a:hover {
+    transition: 0.4s;
+    color: mediumblue;
+}
 @media (max-width: 2561px) and (min-width: 2151px) {
     .title {
         font-size: 80px;

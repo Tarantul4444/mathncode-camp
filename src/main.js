@@ -4,9 +4,13 @@ import "@/assets/css/global.css";
 import { Swiper, EffectFade } from "swiper";
 import VueAwesomeSwiper from "vue-awesome-swiper";
 import "swiper/swiper-bundle.css";
+import VueScrollTo from "vue-scrollto";
+
+export const EventBus = new Vue();
 
 Swiper.use([EffectFade]);
 Vue.use(VueAwesomeSwiper);
+Vue.use(VueScrollTo, { duration: 500 });
 
 Vue.config.productionTip = false;
 

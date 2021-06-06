@@ -6,15 +6,16 @@
     <p class="text-center join__description">
       Инновационный загородный компьютерный лагерь для школьников.
     </p>
-    <img
-      class="join__image"
-      src="../assets/images/Join_code.png"
-    />
-    <button class="button join__button" @click="openModal">Присоединяйтесь</button>
+    <img class="join__image" src="../assets/images/Join_code.png" />
+    <button class="button join__button" @click="openModal">
+      Присоединяйтесь
+    </button>
   </div>
 </template>
 
 <script>
+import { EventBus } from "../main.js";
+
 export default {
   data() {
     return {
@@ -23,9 +24,10 @@ export default {
   },
   methods: {
     openModal() {
-      
-    }
-  } 
+      this.showModal = true,
+      EventBus.$emit("boolean", this.showModal)
+    },
+  },
 };
 </script>
 

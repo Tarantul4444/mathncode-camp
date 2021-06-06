@@ -180,7 +180,7 @@ ul {
     width: 450px;
     margin-bottom: 30px;
   }
-  .trainers__bg-image  {
+  .trainers__bg-image {
     border-radius: 40px;
   }
   .trainers__description {
@@ -213,7 +213,7 @@ ul {
     width: 350px;
     margin-bottom: 20px;
   }
-  .trainers__bg-image  {
+  .trainers__bg-image {
     border-radius: 20px;
   }
   .trainers__description {

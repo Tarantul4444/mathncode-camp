@@ -62,7 +62,7 @@ export default {
   float: right;
   shape-outside: url("../assets/images/Rocket.png");
   max-width: 50%;
-  width: 500px;
+  width: 490px;
 }
 .program__description {
   margin: 28px 150px 0;
