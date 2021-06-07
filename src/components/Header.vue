@@ -1,20 +1,20 @@
 <template>
   <div class="header">
     <transition name="header__burger-fade">
-    <img
-      class="header__icon"
-      v-show="!isOpen"
-      @click="isOpen = true"
-      src="../assets/icons/Menu.svg"
-    />
+      <img
+        class="header__icon"
+        v-show="!isOpen"
+        @click="isOpen = true"
+        src="../assets/icons/Menu.svg"
+      />
     </transition>
     <transition name="header__cancel-fade">
-    <img
-      class="header__icon"
-      v-show="isOpen"
-      @click="isOpen = false"
-      src="../assets/icons/Cancel.svg"
-    />
+      <img
+        class="header__icon"
+        v-show="isOpen"
+        @click="isOpen = false"
+        src="../assets/icons/Cancel.svg"
+      />
     </transition>
     <transition name="slide-fade">
       <div class="header__menu" v-show="isOpen">
@@ -54,6 +54,7 @@ export default {
     return {
       isOpen: false,
       showModal: false,
+      img: "Menu.svg",
     }
   },
   methods: {
@@ -117,10 +118,12 @@ export default {
   opacity: 0;
 }
 .header__burger-fade-enter-active, .header__cancel-fade-enter-active {
-  transition: all .4s ease;
-  transition-delay: 0.4s;
+  transition: all .4s ease .4s;
 }
-.header__burger-fade-leave-active, .header__cancel-fade-leave-active  {
+.header__cancel-fade-leave-active {
+  opacity: 0;
+}
+.header__burger-fade-leave-active  {
   transition: all .4s cubic-bezier(1.0, 0.5, 0.8, 1.0);
 }
 .header__burger-fade-enter, .header__burger-fade-leave-to,

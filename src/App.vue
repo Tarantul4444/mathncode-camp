@@ -55,6 +55,15 @@ export default {
       showModal: false,
     }
   },
+  watch: {
+    showModal() {
+      if (this.showModal) {
+        document.documentElement.style.overflow = 'hidden'
+        return
+      }
+      document.documentElement.style.overflow = 'auto'
+    }
+  },
   created() {
     EventBus.$on("boolean", (showModal) => {
       this.showModal = showModal

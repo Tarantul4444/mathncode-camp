@@ -34,6 +34,9 @@ a:hover {
     transition: 0.4s;
     color: mediumblue;
 }
+.no-display {
+    display: none;
+}
 @media (max-width: 2561px) and (min-width: 2151px) {
     .title {
         font-size: 80px;
