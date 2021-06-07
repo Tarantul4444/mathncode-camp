@@ -11,7 +11,9 @@
       </p>
     </div>
     <img src="../assets/images/Team.png" class="enrollment__image" />
-    <button class="button enrollment__button" @click="openModal">Присоединяйтесь</button>
+    <button class="button enrollment__button" @click="openModal">
+      Присоединяйтесь
+    </button>
   </div>
 </template>
 
@@ -31,10 +33,9 @@ export default {
   },
   methods: {
     openModal() {
-      this.showModal = true,
-      EventBus.$emit("boolean", this.showModal)
+      (this.showModal = true), EventBus.$emit("boolean", this.showModal);
     },
-  }
+  },
 };
 </script>
 

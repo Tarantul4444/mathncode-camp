@@ -53,22 +53,22 @@ export default {
   data() {
     return {
       showModal: false,
-    }
+    };
   },
   watch: {
     showModal() {
       if (this.showModal) {
-        document.documentElement.style.overflow = 'hidden'
-        return
+        document.documentElement.style.overflow = "hidden";
+        return;
       }
-      document.documentElement.style.overflow = 'auto'
-    }
+      document.documentElement.style.overflow = "auto";
+    },
   },
   created() {
     EventBus.$on("boolean", (showModal) => {
-      this.showModal = showModal
-    })
-  }
+      this.showModal = showModal;
+    });
+  },
 };
 </script>
 

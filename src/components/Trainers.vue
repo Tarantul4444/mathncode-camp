@@ -9,7 +9,7 @@
       <swiper ref="swiper" class="swiper" :options="swiperOptions">
         <swiper-slide
           class="trainers__container"
-          v-for="slide in slides"
+          v-for="(slide, index) in slides"
           :key="slide.id"
         >
           <div>
@@ -26,6 +26,14 @@
                 {{ trainer }}
               </li>
             </ul>
+          </div>
+          <div class="trainers__pagination">
+            <div
+              class="circle"
+              v-for="page in pagination"
+              :key="page.id"
+              :class="{ 'bg-gray': index === page }"
+            ></div>
           </div>
         </swiper-slide>
         <img
@@ -83,6 +91,7 @@ export default {
           ],
         },
       ],
+      pagination: [0, 1, 2, 3],
       swiperOptions: {
         prevButton: ".swiper-button-prev",
         nextButton: ".swiper-button-next",
@@ -144,6 +153,17 @@ ul {
   top: 0;
   opacity: 0.3;
 }
+.trainers__pagination {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.circle {
+  margin: 0 2px;
+}
 .swiper__wrapper {
   position: relative;
 }
@@ -186,6 +206,12 @@ ul {
   .trainers__description {
     margin-left: 130px;
   }
+  .trainers__pagination {
+    margin-bottom: 35px;
+  }
+  .circle {
+    margin: 0 8px;
+  }
   .swiper-arrow {
     border-width: 0 7px 7px 0;
     padding: 30px;
@@ -219,6 +245,12 @@ ul {
   .trainers__description {
     margin-left: 90px;
   }
+  .trainers__pagination {
+    margin-bottom: 25px;
+  }
+  .circle {
+    margin: 0 4.5px;
+  }
   .swiper-arrow {
     border-width: 0 5px 5px 0;
     padding: 20px;
@@ -234,6 +266,12 @@ ul {
   .trainers__image {
     width: 300px;
     height: 300px;
+  }
+  .trainers__pagination {
+    margin-bottom: 25px;
+  }
+  .circle {
+    margin: 0 3.5px;
   }
   .swiper-arrow {
     border-width: 0 4px 4px 0;
@@ -294,6 +332,9 @@ ul {
 @media (max-width: 426px) {
   .trainers__image {
     width: 150px;
+  }
+  .trainers__pagination {
+    margin-bottom: 10px;
   }
 }
 </style>

@@ -4,7 +4,11 @@
       <div class="modal__wrapper">
         <div class="modal__head">
           <img class="modal__image" src="../assets/images/MnC_logo.svg" />
-          <img src="../assets/icons/Cancel.svg" class="modal__cancel" @click="closeModal" />
+          <img
+            src="../assets/icons/Cancel.svg"
+            class="modal__cancel"
+            @click="closeModal"
+          />
         </div>
         <iframe
           src="https://docs.google.com/forms/d/e/1FAIpQLSfZdP4IQGKytT1MmUehIGAeSTU_ul-eYx0vVLxHaW2ptV1bEQ/viewform?embedded=true"
@@ -24,13 +28,13 @@ export default {
   data() {
     return {
       showModal: false,
-    }
+    };
   },
   methods: {
     closeModal() {
-      EventBus.$emit("boolean", this.showModal)
-    }
-  }
+      EventBus.$emit("boolean", this.showModal);
+    },
+  },
 };
 </script>
 
@@ -71,12 +75,13 @@ export default {
 }
 /* Animations */
 .modal-fade-enter-active {
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 .modal-fade-leave-active {
-  transition: all .6s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  transition: all 0.6s cubic-bezier(1, 0.5, 0.8, 1);
 }
-.modal-fade-enter, .modal-fade-leave-to {
+.modal-fade-enter,
+.modal-fade-leave-to {
   opacity: 0;
 }
 /* Medias */

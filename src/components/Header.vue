@@ -25,7 +25,9 @@
           <li><a href="#" v-scroll-to="'#dates'">Даты</a></li>
           <li><a href="#" v-scroll-to="'#gallery'">Галерея</a></li>
         </ul>
-        <button class="button header__button" @click="openModal">Присоединяйтесь</button>
+        <button class="button header__button" @click="openModal">
+          Присоединяйтесь
+        </button>
       </div>
     </transition>
     <transition name="blackout-fade">
@@ -55,14 +57,13 @@ export default {
       isOpen: false,
       showModal: false,
       img: "Menu.svg",
-    }
+    };
   },
   methods: {
     openModal() {
-      this.showModal = true,
-      EventBus.$emit("boolean", this.showModal)
-    }
-  }
+      (this.showModal = true), EventBus.$emit("boolean", this.showModal);
+    },
+  },
 };
 </script>
 
@@ -103,13 +104,16 @@ export default {
   transition: 0.4s;
 }
 /* Animations */
-.slide-fade-enter-active, .blackout-fade-enter-active {
-  transition: all .3s ease;
+.slide-fade-enter-active,
+.blackout-fade-enter-active {
+  transition: all 0.3s ease;
 }
-.slide-fade-leave-active, .blackout-fade-leave-active {
-  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+.slide-fade-leave-active,
+.blackout-fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
 }
-.slide-fade-enter, .slide-fade-leave-to,
+.slide-fade-enter,
+.slide-fade-leave-to,
 .blackout-fade-enter {
   transform: translateX(-10px);
   opacity: 0;
@@ -117,17 +121,20 @@ export default {
 .blackout-fade-leave-to {
   opacity: 0;
 }
-.header__burger-fade-enter-active, .header__cancel-fade-enter-active {
-  transition: all .4s ease .4s;
+.header__burger-fade-enter-active,
+.header__cancel-fade-enter-active {
+  transition: all 0.4s ease 0.4s;
 }
 .header__cancel-fade-leave-active {
   opacity: 0;
 }
-.header__burger-fade-leave-active  {
-  transition: all .4s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+.header__burger-fade-leave-active {
+  transition: all 0.4s cubic-bezier(1, 0.5, 0.8, 1);
 }
-.header__burger-fade-enter, .header__burger-fade-leave-to,
-.header__cancel-fade-enter, .header__cancel-fade-leave-to {
+.header__burger-fade-enter,
+.header__burger-fade-leave-to,
+.header__cancel-fade-enter,
+.header__cancel-fade-leave-to {
   opacity: 0;
 }
 /* Medias */

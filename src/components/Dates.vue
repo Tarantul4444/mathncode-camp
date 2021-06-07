@@ -7,7 +7,9 @@
         <h2 class="text-center text_white title_small dates__cost">
           50.000 тг
         </h2>
-        <button class="button dates__button" @click="openModal">Подать заявку</button>
+        <button class="button dates__button" @click="openModal">
+          Подать заявку
+        </button>
       </div>
       <p class="text-center dates__description">
         Наш камп - это чистый воздух, горные прогулки, интересные квесты,
@@ -30,14 +32,13 @@ export default {
   data() {
     return {
       showModal: false,
-    }
+    };
   },
   methods: {
     openModal() {
-      this.showModal = true,
-      EventBus.$emit("boolean", this.showModal)
-    }
-  }
+      (this.showModal = true), EventBus.$emit("boolean", this.showModal);
+    },
+  },
 };
 </script>
 
