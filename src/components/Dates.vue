@@ -36,8 +36,7 @@ export default {
   },
   methods: {
     openModal() {
-      this.showModal = true,
-      EventBus.$emit("boolean", this.showModal);
+      (this.showModal = true), EventBus.$emit("boolean", this.showModal);
     },
   },
 };

@@ -19,11 +19,23 @@
     <transition name="slide-fade">
       <div class="header__menu" v-show="isOpen">
         <ul class="header__menu-list">
-          <li><a href="#" @click="closeMenu" v-scroll-to="'#about'">О нас</a></li>
-          <li><a href="#" @click="closeMenu" v-scroll-to="'#education'">Обучение</a></li>
-          <li><a href="#" @click="closeMenu" v-scroll-to="'#trainers'">Тренера</a></li>
-          <li><a href="#" @click="closeMenu" v-scroll-to="'#dates'">Даты</a></li>
-          <li><a href="#" @click="closeMenu" v-scroll-to="'#gallery'">Галерея</a></li>
+          <li>
+            <a href="#" @click="closeMenu" v-scroll-to="'#about'">О нас</a>
+          </li>
+          <li>
+            <a href="#" @click="closeMenu" v-scroll-to="'#education'"
+              >Обучение</a
+            >
+          </li>
+          <li>
+            <a href="#" @click="closeMenu" v-scroll-to="'#trainers'">Тренера</a>
+          </li>
+          <li>
+            <a href="#" @click="closeMenu" v-scroll-to="'#dates'">Даты</a>
+          </li>
+          <li>
+            <a href="#" @click="closeMenu" v-scroll-to="'#gallery'">Галерея</a>
+          </li>
         </ul>
         <button class="button header__button" @click="openModal">
           Присоединяйтесь
@@ -61,8 +73,7 @@ export default {
   },
   methods: {
     openModal() {
-      this.showModal = true,
-      EventBus.$emit("boolean", this.showModal);
+      (this.showModal = true), EventBus.$emit("boolean", this.showModal);
     },
     closeMenu() {
       this.isOpen = false;
