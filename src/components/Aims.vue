@@ -78,13 +78,19 @@ ul {
 }
 @media (max-width: 2561px) and (min-width: 2151px) {
   .aims {
-    margin-bottom: 300px;
+    margin: 0 -120px 300px;
   }
   .aims__container {
     margin-top: 120px;
   }
   .aims__container__block {
-    margin: 0 50px;
+    margin: 0 40px;
+  }
+  .aims__container__block:first-child {
+    margin-left: 0;
+  }
+  .aims__container__block:last-child {
+    margin-right: 0;
   }
   .aims__title {
     margin: 20px 0;

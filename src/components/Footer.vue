@@ -6,13 +6,13 @@
     </div>
     <p>© M&C 2021</p>
     <div class="footer__images">
-      <a href="https://instagram.com/mathncode?utm_medium=copy_link"
+      <a target="_blank" href="https://instagram.com/mathncode?utm_medium=copy_link"
         ><img src="../assets/images/Instagram.svg"
       /></a>
-      <a href="https://t.me/mathncode"
+      <a target="_blank" href="https://t.me/mathncode"
         ><img src="../assets/images/Telegram.svg"
       /></a>
-      <a href="https://vk.com/mathncode"
+      <a target="_blank" href="https://vk.com/mathncode"
         ><img src="../assets/images/VK.svg"
       /></a>
     </div>

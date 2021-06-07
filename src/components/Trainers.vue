@@ -30,9 +30,9 @@
           <div class="trainers__pagination">
             <div
               class="circle"
-              v-for="page in pagination"
+              v-for="(page, key) in slides"
               :key="page.id"
-              :class="{ 'bg-gray': index === page }"
+              :class="{ 'bg-gray': index === key }"
             ></div>
           </div>
         </swiper-slide>
@@ -40,7 +40,6 @@
           class="image-max-size trainers__bg-image"
           src="../assets/images/Workspace.png"
         />
-        <div class="swiper-pagination" slot="pagination"></div>
       </swiper>
       <div class="swiper-arrow left" @click="prev()"></div>
       <div class="swiper-arrow right" @click="next()"></div>
@@ -91,15 +90,10 @@ export default {
           ],
         },
       ],
-      pagination: [0, 1, 2, 3],
       swiperOptions: {
         prevButton: ".swiper-button-prev",
         nextButton: ".swiper-button-next",
         loop: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
         effect: "fade",
         speed: 800,
         fadeEffect: { crossFade: true },

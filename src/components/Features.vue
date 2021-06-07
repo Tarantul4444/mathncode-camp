@@ -58,7 +58,7 @@ export default {
   justify-content: center;
 }
 .features__info {
-  width: 40%;
+  width: 60%;
 }
 .features__image {
   width: 40%;

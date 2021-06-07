@@ -36,7 +36,8 @@ export default {
   },
   methods: {
     openModal() {
-      (this.showModal = true), EventBus.$emit("boolean", this.showModal);
+      this.showModal = true,
+      EventBus.$emit("boolean", this.showModal);
     },
   },
 };
@@ -112,10 +113,10 @@ export default {
   }
   .dates__button {
     margin-top: 25px;
-    width: 480px;
-    height: 150px;
+    width: 420px;
+    height: 200px;
     border-radius: 40px;
-    font-size: 55px;
+    font-size: 45px;
   }
   .dates__description {
     margin: 0 0 0 120px;

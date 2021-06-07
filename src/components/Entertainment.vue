@@ -110,6 +110,7 @@ export default {
   width: inherit;
   height: inherit;
   border-radius: 10px;
+  object-fit: cover;
 }
 @media (max-width: 2561px) and (min-width: 2151px) {
   .entertainment {
@@ -157,8 +158,8 @@ export default {
 }
 @media (max-width: 1451px) and (min-width: 1416px) {
   .entertainment__block {
-    width: 210px;
-    height: 210px;
+    width: 220px;
+    height: 220px;
   }
 }
 @media (max-width: 1023px) {
