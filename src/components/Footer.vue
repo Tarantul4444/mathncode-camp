@@ -1,8 +1,8 @@
 <template>
   <div class="footer">
     <div class="footer__telephone">
-      <p>+7(727) 269-54-54</p>
       <p>+7(708)480-78-00</p>
+      <p>+7(708) 480-78-01</p>
     </div>
     <p>© M&C 2021</p>
     <div class="footer__images">

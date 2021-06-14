@@ -30,9 +30,9 @@
           <li>
             <a href="#" @click="closeMenu" v-scroll-to="'#trainers'">Тренера</a>
           </li>
-          <li>
+          <!-- <li>
             <a href="#" @click="closeMenu" v-scroll-to="'#dates'">Даты</a>
-          </li>
+          </li> -->
           <li>
             <a href="#" @click="closeMenu" v-scroll-to="'#gallery'">Галерея</a>
           </li>
@@ -50,12 +50,12 @@
       <li><a href="#" v-scroll-to="'#about'">О нас</a></li>
       <li><a href="#" v-scroll-to="'#education'">Обучение</a></li>
       <li><a href="#" v-scroll-to="'#trainers'">Тренера</a></li>
-      <li><a href="#" v-scroll-to="'#dates'">Даты</a></li>
+      <!-- <li><a href="#" v-scroll-to="'#dates'">Даты</a></li> -->
       <li><a href="#" v-scroll-to="'#gallery'">Галерея</a></li>
     </ul>
     <div class="header__telephone">
-      <p>+7(727) 269-54-54</p>
       <p>+7(708)480-78-00</p>
+      <p>+7(708) 480-78-01</p>
     </div>
   </div>
 </template>

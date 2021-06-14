@@ -17,7 +17,7 @@
           <div class="entertainment__flip-box-back">
             <img
               class="entertainment__flip-box-image"
-              :src="require(`../assets/images/${block.img}`)"
+              :src="require(`../assets/images/entertainment/${block.img}`)"
             />
           </div>
         </div>
@@ -33,27 +33,27 @@ export default {
       blocks: [
         {
           text: "Неформальная обстановка",
-          img: "Ent1.jpg",
+          img: "Informal-atmosphere.jpg",
         },
         {
           text: "Сообщество и единомышленники",
-          img: "Ent2.jpg",
+          img: "Community.jpg",
         },
         {
           text: "Посвящение",
-          img: "Ent3.jpg",
+          img: "Dedication.jpg",
         },
         {
           text: "Интеллектуальные игры",
-          img: "Ent4.jpg",
+          img: "Mind-games.jpg",
         },
         {
           text: "Спортивные мероприятия",
-          img: "Ent5.jpg",
+          img: "Sports-activities.jpg",
         },
         {
           text: "Походы в горы",
-          img: "Ent6.jpg",
+          img: "Hiking.jpg",
         },
       ],
     };

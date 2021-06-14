@@ -9,7 +9,7 @@
       <Program id="education" />
       <Trainers id="trainers" />
       <Entertainment />
-      <Dates id="dates" />
+      <!-- <Dates id="dates" /> -->
       <Enrollment />
       <Gallery id="gallery" />
     </div>
@@ -25,7 +25,7 @@ import Aims from "./components/Aims.vue";
 import Program from "./components/Program.vue";
 import Trainers from "./components/Trainers.vue";
 import Entertainment from "./components/Entertainment.vue";
-import Dates from "./components/Dates.vue";
+// import Dates from "./components/Dates.vue";
 import Enrollment from "./components/Enrollment.vue";
 import Gallery from "./components/Gallery.vue";
 import Footer from "./components/Footer.vue";
@@ -43,7 +43,7 @@ export default {
     Program,
     Trainers,
     Entertainment,
-    Dates,
+    // Dates,
     Enrollment,
     Gallery,
     Footer,

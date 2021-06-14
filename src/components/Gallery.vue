@@ -2,20 +2,21 @@
   <div class="gallery">
     <h1 class="title text_red text-center">Галерея</h1>
     <div class="thumb-example">
-      <!-- swiper1 -->
       <swiper
         class="swiper gallery-top"
         :options="swiperOptionTop"
         ref="swiperTop"
         @slideChange="onSlideChange"
       >
-        <swiper-slide class="slide-1"></swiper-slide>
-        <swiper-slide class="slide-2"></swiper-slide>
-        <swiper-slide class="slide-3"></swiper-slide>
-        <swiper-slide class="slide-4"></swiper-slide>
-        <swiper-slide class="slide-5"></swiper-slide>
+        <swiper-slide
+          v-for="photo in gallery"
+          :key="photo.id"
+          :style="{
+            backgroundImage:
+              'url(' + require(`../assets/images/gallery/${photo}`) + ')',
+          }"
+        ></swiper-slide>
       </swiper>
-      <!-- swiper2 Thumbs -->
       <swiper
         class="swiper gallery-thumbs"
         @swiper="setThumbSwiper"
@@ -23,11 +24,14 @@
         ref="swiperThumbs"
         @slideChange="onThumbnailChange"
       >
-        <swiper-slide class="slide-1"></swiper-slide>
-        <swiper-slide class="slide-2"></swiper-slide>
-        <swiper-slide class="slide-3"></swiper-slide>
-        <swiper-slide class="slide-4"></swiper-slide>
-        <swiper-slide class="slide-5"></swiper-slide>
+        <swiper-slide
+          v-for="photo in gallery"
+          :key="photo.id"
+          :style="{
+            backgroundImage:
+              'url(' + require(`../assets/images/gallery/${photo}`) + ')',
+          }"
+        ></swiper-slide>
       </swiper>
     </div>
   </div>
@@ -57,6 +61,59 @@ export default {
         touchRatio: 0.2,
         slideToClickedSlide: true,
       },
+      gallery: [
+        "Photo1.jpg",
+        "Photo2.jpg",
+        "Photo3.jpg",
+        "Photo4.jpg",
+        "Photo5.jpg",
+        "Photo6.jpg",
+        "Photo7.jpg",
+        "Photo8.jpg",
+        "Photo9.jpg",
+        "Photo10.jpg",
+        "Photo11.jpg",
+        "Photo12.jpg",
+        "Photo13.jpg",
+        "Photo14.jpg",
+        "Photo15.jpg",
+        "Photo16.jpg",
+        "Photo17.jpg",
+        "Photo18.jpg",
+        "Photo19.jpg",
+        "Photo20.jpg",
+        "Photo21.jpg",
+        "Photo22.jpg",
+        "Photo23.jpg",
+        "Photo24.jpg",
+        "Photo25.jpg",
+        "Photo26.jpg",
+        "Photo27.jpg",
+        "Photo28.jpg",
+        "Photo29.jpg",
+        "Photo30.jpg",
+        "Photo31.jpg",
+        "Photo32.jpg",
+        "Photo33.jpg",
+        "Photo34.jpg",
+        "Photo35.jpg",
+        "Photo36.jpg",
+        "Photo37.jpg",
+        "Photo38.jpg",
+        "Photo39.jpg",
+        "Photo40.jpg",
+        "Photo41.jpg",
+        "Photo42.jpg",
+        "Photo43.jpg",
+        "Photo44.jpg",
+        "Photo45.jpg",
+        "Photo46.jpg",
+        "Photo47.jpg",
+        "Photo48.jpg",
+        "Photo49.jpg",
+        "Photo50.jpg",
+        "Photo51.jpg",
+      ],
     };
   },
   methods: {
@@ -84,21 +141,6 @@ export default {
   background-size: cover;
   background-position: center;
   border-radius: 10px;
-}
-.slide-1 {
-  background-image: url("../assets/images/gallery/Photo1.jpg");
-}
-.slide-2 {
-  background-image: url("../assets/images/gallery/Photo2.jpg");
-}
-.slide-3 {
-  background-image: url("../assets/images/gallery/Photo3.jpg");
-}
-.slide-4 {
-  background-image: url("../assets/images/gallery/Photo4.jpg");
-}
-.slide-5 {
-  background-image: url("../assets/images/gallery/Photo5.jpg");
 }
 .gallery-top {
   height: 80%;
