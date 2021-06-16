@@ -15,7 +15,7 @@
           <div>
             <img
               class="image-max-size trainers__image"
-              :src="require(`../assets/images/${slide.img}`)"
+              :src="require(`../assets/images/trainers/${slide.img}`)"
             />
             <p class="text-center title_small">{{ slide.name }}</p>
           </div>
@@ -53,40 +53,61 @@ export default {
     return {
       slides: [
         {
-          name: "Адина Магавина",
-          img: "Trainer1.jpg",
+          name: "Темирлан Сатылханов",
+          img: "Temirlan-Satylhanov.jpg",
           trainers: [
-            "Международная Евразийская олимпиада серебро 2012",
-            "Республиканская Олимпиада золото 2012, бронза 2011",
-            "Полуфиналист чемпионата мира по программированию ACM ICPC",
-            "Google I/O, Mountain View, California, USA",
-            "Google Conference Grant, Craft Conference, Budapest, Hungary",
+            "2019 - International Collegiate Programming Contest World Finalist",
+            "2018-2019 Northern Eurasia Finals Top-4",
+            "2017 - VK Cup Finalist",
+            "2015-2016 ACM ICPC Sub Regional Contest 1st place",
+            "2012, 2013 - International Zhautykov Olympiad Bronze Medalist",
+            "2013 - Republican Olympiad in Math Silver Medalist",
           ],
         },
         {
-          name: "Хлыновский Кирилл",
-          img: "Trainer2.jpg",
+          name: "Алимжан Аманов",
+          img: "Alimzhan.jpg",
           trainers: [
-            "Международная Евразийская Олимпиада бронза 2016",
-            "Финалист чемпионата мира по программированию ICPC 2019-2020",
+            "Two mathematical scientific papers",
+            "2012 - Bronze Medal in International Zhautikov Math Olympiad",
+            "2012 - Bronze Medal in Kazakhstan national Olympiad in Mathematics",
+            "2014 - Winner of Middle-Asia Region of  Northeastern European Regional Contest",
+            "2014 - Bronze Medal in International Math Competition",
+            "2014 - Top 50 at Hackerrank World Cup semi-finals",
+            "2016 - Winner of Kazakhstan subregion of Northeastern European Regional Contest",
           ],
         },
         {
-          name: "Лариса Пак",
-          img: "Trainer3.jpg",
+          name: "Данияр Закарин",
+          img: "Daniyar.jpg",
           trainers: [
-            "Преподавательский стаж - 27 лет",
-            "Ученики являются призерами городских и областных этапов олимпиад и конкурсов проектов по информатике",
-            "Методист материала по логике",
+            "2018, 2019 - International Olympiad in Informatics Silver Medalist",
+            "2019 - International Zhautykov Olympiad Gold Medalist",
+            "2019 - Republican Olympiad Gold Medalist",
+            "2018-2019 International Eurasian Olympiad Gold Medalist",
+            "2018 - TechnoCup Bronze Medalist",
           ],
         },
         {
-          name: "Рузана Айшуакова",
-          img: "Trainer4.jpg",
+          name: "Темирлан Байболов",
+          img: "Temirlan-Baibolov.jpg",
           trainers: [
-            "Призер III Международной научно-технической конференции студентов, магистрантов и молодых ученых",
-            "Реализовала алгоритм постановки медицинского диагноза на основе биохимического анализа крови",
-            "Реализация различных клиент-серверных веб и мобильных приложений",
+            "2020 - International Olympiad in Informatics Silver Medalist",
+            "2019 - International Olympiad in Informatics Bronze Medalist",
+            "2020 - International Zhautykov Olympiad Gold Medalist",
+            "2018, 2019, 2020 - Republican Olympiad Gold Medalist",
+            "2021 -  Northern Eurasia Finalist",
+            "2017 - Republican Olympiad Bronze Medalist",
+            "2019 - International Zhautykov Olympiad Bronze Medalist",
+          ],
+        },
+        {
+          name: "Ноэль Мухамеджанов",
+          img: "Noel.jpg",
+          trainers: [
+            "2019 - Eurasian Olympiad in Informatics Silver Medalist",
+            "2020 - Almaty Region Olympiad Silver Medalist",
+            "2019, 2020 - International Zhautykov Olympiad Participant",
           ],
         },
       ],
@@ -259,7 +280,6 @@ ul {
 @media (max-width: 1751px) and (min-width: 1451px) {
   .trainers__image {
     width: 300px;
-    height: 300px;
   }
   .trainers__pagination {
     margin-bottom: 25px;
