@@ -1,7 +1,7 @@
 <template>
   <div class="join">
     <h1 class="title_small text-center join__title">
-      Первый лагерь спортивного программирования в Казахстане
+      Первый выездной лагерь спортивного программирования в Казахстане
     </h1>
     <p class="text-center join__description">
       Инновационный загородный компьютерный лагерь для школьников.
@@ -38,7 +38,7 @@ export default {
   margin-bottom: 120px;
 }
 .join__title {
-  width: 60%;
+  width: 70%;
 }
 .join__description {
   margin-top: 12px;
